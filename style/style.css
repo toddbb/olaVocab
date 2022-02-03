@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.background-categories {    
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.2)
+      ),
+      url(/img/bckgrnd1.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+}
+
+
+.background-flashcards {   
+    background: rgb(141,240,222);
+    background: linear-gradient(0deg, rgba(141,240,222,1) 0%, rgba(100,72,227,1) 100%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    color: #f9f9f9;
+    padding: 20px;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 30px;
+}
+
+
+/**********************************************************/
+/******                     HEADER           *************/
+/*********************************************************/
+
+header {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 170px;
+}
+
+#brand {
+    background: #F6F6F6;
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
+
+.nav-back {
+    cursor: pointer;
+}
+.nav-back > * {
+    pointer-events: none;
+}
+
+
+/**********************************************************/
+/******         MAIN PAGE - CATEGORIES       *************/
+/*********************************************************/
+
+.cell-cat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(22, 56, 131, 0.8);
+    border: 1px solid transparent;
+    color: #ffffff;
+    border-radius: 25px;
+    font-size: 1.5em;
+    height: 260px;
+    width: 250px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 500ms;
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+.cell-cat:hover {
+    background: rgba(22, 56, 131, 0.95);
+}
+
+.cell-cat > * {
+    pointer-events: none;
+}
+
+.img-cat {
+    border-radius: 50%;
+}
+
+.vn-cat {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+
+/**********************************************************/
+/******         MAIN PAGE - FLASHCARDS       *************/
+/*********************************************************/
+
+
+.main-flashcards-header {
+    justify-content: center;
+    align-items: center;
+}
+
+.main-flashcards-header-en {
+    font-size: 2.6em;
+    font-weight: bold;
+}
+
+.main-flashcards-header-img {
+    background: #F6F6F6;
+}
+
+.main-flashcards-header > * { 
+    margin: 30px 30px;
+}
+
+.cell-flashcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: rgba(248, 248, 248, 1);
+    color: #222;
+    padding: 20px;
+    border-radius: 20px;
+    min-width: 250px;
+    cursor: pointer;
+    font-size: 1.5em;
+    max-width: 400px;
+}
+
+.cell-flashcard:hover {
+    background: rgb(219, 226, 230);
+}
+
+.cell-flashcard > * {
+    margin-bottom: 15px;
+    pointer-events: none;
+}
+
+.audio-icon-flashcard {
+    cursor: pointer;
+
+}
+
+.flashcard-top {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.flashcard-en {    
+    font-size: 1.67em;
+    text-align: center;
+    width: 100%;
+}
+
+.audio-icon-flashcard {
+    margin-left: auto;
+}
+
+.flashcard-vn {    
+    font-size: 1.33em;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+/**********************************************************/
+/******          BOOTSTRAP CLASSES           *************/
+/*********************************************************/
+.flex-row {
+    display: flex;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.noDisplay {
+    display: none;
+}
+
+
+
+
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 700px) {
+    .grid-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+    #brand {
+        position: absolute;
+        left: 50px;
+        top: 50px;
+    }
+    .title { font-size: 1.15em; }
+    .nav-back {
+        position: absolute;
+        top: 75px;
+        right: 100px;
+    }
+    .grid-container {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1300px) {
+    .grid-container {
+        grid-template-columns: repeat(4,1fr);
+    }
+    .title { font-size: 1.8em; }
+}
