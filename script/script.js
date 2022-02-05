@@ -23,7 +23,7 @@ const scrollTop = () => {
 };
 
 function goBack() {
-  document.location.href="/";
+  document.location.href="/olaVocab";
 }
 
 function playAudio(strId) {
