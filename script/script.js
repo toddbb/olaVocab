@@ -23,7 +23,7 @@ const scrollTop = () => {
 };
 
 function goBack() {
-  document.location.href="../";
+  document.location.href="";
 }
 
 function playAudio(strId) {
